@@ -24,9 +24,10 @@ a {
 
 /* Variaveis Globais*/
 :root {
-  --color-destaque: #5e0ddf;
+  --color-destaque: #4d3ef3;
   --color-black: #101010;
   --color-white: #fafafa;
+  --color-green: #3d6485;
 }
 
 /* Container principal */
@@ -49,6 +50,39 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #151515;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%; /* Start at 0 width */
+  background-color: var(--color-destaque);
+  transition: width 0.3s ease-out;
+}
+
+#loading-text {
+  position: absolute;
+  color: var(--color-white);
+  font-size: 3rem;
+  z-index: 10;
 }
 
 /* WIDGET 1: Informações do usuário */
